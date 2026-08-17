@@ -102,7 +102,7 @@ class UptimeApp:
             self.notifier.notify(service.name, status_atual)
         
         service.last_status = status_atual
-        status_texto = "ONLINE ✅" if status_atual else "OFFLINE ❌"
+        status_texto = "ONLINE" if status_atual else "OFFLINE"
         agora = datetime.datetime.now().strftime("%H:%M:%S")
         
         # Verifica se o item ainda existe antes de atualizar (evita erro ao remover)
